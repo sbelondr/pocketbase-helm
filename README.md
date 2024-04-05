@@ -10,6 +10,7 @@ See [here](https://artifacthub.io/packages/helm/pocketbase-docker/pocketbase-hel
 
 | PocketBase Version | Helm Version |
 |--------------------|--------------|
+| v0.22.7            | 0.22.7       |
 | v0.14.3            | 0.11.0       |
 | v0.13.1            | 0.10.0       |
 | v0.12.3            | 0.9.1        |
@@ -20,6 +21,13 @@ See [here](https://artifacthub.io/packages/helm/pocketbase-docker/pocketbase-hel
 
 <details>
 <summary>Spoiler</summary>
+
+### v0.22.7 
+
+- Upgraded to pocketbase v0.22.7 
+
+Check https://github.com/pocketbase/pocketbase/releases/tag/v0.22.7 for possible breaking changes
+
 
 ### v0.11.0
 
