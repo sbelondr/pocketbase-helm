@@ -20,24 +20,24 @@ flags:
 ## @param image.tag Overrides the image tag whose default is the chart appVersion
 ##
 image:
-  repository: rg.fr-par.scw.cloud/sepropriodev/pocketbase
+  repository: sbelondr/pocketbase
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "0.22-latest"
 
 ## @param persistence.storage How much storage space should be reserved for PocketBase
 ## @param persistence.storageClass The PV storage class (a storageClass with Retain policy is recommended)
 ##
 persistence:
-  storage: 2Gi
+  storage: 100Gi
   storageClass: ""
 
 ## @param ingress.enabled Whether to enable the ingress
 ## @param ingress.clusterIssuer The Cert Manager cluster issuer (https://cert-manager.io/docs/configuration/acme/http01/)
-## @param ingress.dns The dns name which will expose PocketBase
+## @param ingress.host The host name which will expose PocketBase
 ingress:
   enabled: false
-  clusterIssuer: letsencrypt-prod
-  dns: ""
+  clusterIssuer: letsencrypt-stagging
+  host: ""
 
 ## @param resources The resources associated with the deployment
 resources: {}

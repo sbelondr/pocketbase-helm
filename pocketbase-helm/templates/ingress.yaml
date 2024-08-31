@@ -7,7 +7,7 @@ metadata:
   name: {{ include "pocketbase-helm.fullname" . }}
 spec:
   rules:
-    - host: {{ required "When the ingress is enabled, a valid dns is required" .Values.ingress.dns }}
+    - host: {{ required "When the ingress is enabled, a valid host is required" .Values.ingress.host }}
       http:
         paths:
           - pathType: Prefix
@@ -19,6 +19,6 @@ spec:
                   number: 8090
   tls:
     - hosts:
-        - {{ required "When the ingress is enabled, a valid dns is required" .Values.ingress.dns }}
+        - {{ required "When the ingress is enabled, a valid host is required" .Values.ingress.host }}
       secretName: {{ include "pocketbase-helm.fullname" . }}-cert
 {{ end }}
